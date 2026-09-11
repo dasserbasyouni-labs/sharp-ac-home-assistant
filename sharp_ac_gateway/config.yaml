@@ -1,0 +1,44 @@
+name: "Sharp AC Gateway"
+version: "0.3.5"
+slug: "sharp_ac_gateway"
+image: "ghcr.io/dasserbasyouni-labs/sharp-ac-gateway"
+description: "Production physical ECHONET gateway using Home Assistant MQTT Device Discovery"
+arch:
+  - amd64
+homeassistant: "2026.7.3"
+startup: application
+boot: auto
+stage: experimental
+init: false
+apparmor: true
+host_network: false
+host_ipc: false
+host_dbus: false
+host_pid: false
+host_uts: false
+hassio_api: false
+homeassistant_api: false
+docker_api: false
+auth_api: false
+full_access: false
+ingress: false
+audio: false
+video: false
+gpio: false
+usb: false
+uart: false
+udev: false
+devicetree: false
+kernel_modules: false
+stdin: false
+realtime: false
+journald: false
+tmpfs: true
+backup: cold
+services:
+  - mqtt:need
+map:
+  - type: share
+    read_only: false
+options: {"control_enabled":true,"device_endpoints":[],"eco_correlation_capture":"off","eco_correlation_device_index":1,"profile":"production_physical"}
+schema: {"control_enabled":"bool","device_endpoints":["str"],"eco_correlation_capture":"match(^(off|baseline|compare|analyze)$)","eco_correlation_device_index":"int(1,16)","profile":"match(^production_physical$)"}

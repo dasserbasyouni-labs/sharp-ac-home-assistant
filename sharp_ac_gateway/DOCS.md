@@ -3,8 +3,9 @@
 Options and defaults are listed in [config.yaml](config.yaml). Configure device
 endpoints in the installed App's options.
 
-`control_enabled` defaults to `true`. Set it to `false` before starting a new
-installation or migration to allow read-only enrollment and polling.
+Set `control_enabled` to `false` before starting a new installation or migration
+to allow read-only enrollment and polling. Check the installed options before
+starting; updates preserve existing user settings.
 
 Provide MQTT through Home Assistant Supervisor and configure access to the
 private container registry. Keep protection mode enabled and ECO correlation

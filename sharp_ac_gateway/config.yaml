@@ -1,5 +1,5 @@
 name: "Sharp AC Gateway"
-version: "0.3.13"
+version: "0.3.14"
 slug: "sharp_ac_gateway"
 image: "ghcr.io/dasserbasyouni-labs/sharp-ac-gateway"
 description: "Local Sharp AC control through Home Assistant MQTT discovery"
